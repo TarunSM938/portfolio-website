@@ -1,6 +1,6 @@
 // Wait until the page is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Portfolio Loaded ✅");
+  console.log("Portfolio Loaded");
 
   /* ---------- Smooth Scroll ---------- */
   const navLinks = document.querySelectorAll("nav ul li a");
