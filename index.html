@@ -3,85 +3,701 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio website of Tarun SM - B.Tech CSE student, Frontend Developer, Cloud Enthusiast." />
-  <title>Tarun SM-Portfolio</title>
+  <meta name="description" content="Tarun SM - Frontend Developer and Aspiring Cloud Engineer. Computer Science Engineering student with expertise in Python, JavaScript, AWS, and Oracle Cloud Infrastructure." />
+  <title>Tarun SM | Frontend Developer & Aspiring Cloud Engineer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation -->
   <header>
     <nav>
-      <h1 class="logo">Tarun SM</h1>
+      <div class="logo-container">
+        <h1 class="logo">Tarun<span class="logo-highlight">SM</span></h1>
+        <div class="logo-subtitle">Frontend Developer | Cloud Engineer</div>
+      </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+        <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+        <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
   <!-- Home Section -->
-  <section id="home" class="section">
-    <div class="intro">
-      <h2>Hi, I'm Tarun </h2>
-      <p>
-        A B.Tech CSE student passionate about <strong>Web Development</strong>, 
-        <strong>Python</strong>, and <strong>Cloud Technologies</strong>.  
-        I love building projects, solving problems, and exploring DevOps & Cloud.
+  <section id="home" class="hero-section">
+    <div class="hero-bg">
+      <div class="floating-icons">
+        <i class="fab fa-js-square"></i>
+        <i class="fab fa-python"></i>
+        <i class="fab fa-aws"></i>
+        <i class="fas fa-cloud"></i>
+        <i class="fab fa-react"></i>
+        <i class="fas fa-database"></i>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="greeting">
+        <span class="wave">Hello!</span>
+        <h1>I'm <span class="name-highlight">Tarun SM</span></h1>
+      </div>
+      <div class="typing-container">
+        <span class="typing-text">I develop </span>
+        <span id="typing-words" class="typing-words"></span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-description">
+        A Computer Science Engineering student at Jain University with a passion for 
+        frontend development and cloud technologies. I've solved 200+ DSA problems, 
+        earned cloud certifications, and built responsive web applications. Currently 
+        working as a Python Developer at Infosys Springboard Virtual Internship.
       </p>
-      <a href="#projects" class="btn">View My Work</a>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-folder-open"></i>
+          View My Projects
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fas fa-envelope"></i>
+          Get In Touch
+        </a>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-text">Scroll to discover more</div>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <div class="personal-intro">
+            <h3>About Me</h3>
+            <p>
+              I'm a Computer Science Engineering student at Jain University, Bengaluru, 
+              with a strong foundation in frontend development and growing expertise in 
+              cloud technologies. My journey in tech began with a curiosity about how 
+              digital systems work, leading me to develop proficiency in multiple 
+              programming languages and frameworks.
+            </p>
+            <p>
+              With hands-on experience through virtual internships at Infosys and RD INFRO 
+              Technology, I've worked on real-world projects that have strengthened my 
+              problem-solving abilities and technical skills. I'm particularly passionate 
+              about creating responsive web applications and exploring cloud infrastructure.
+            </p>
+          </div>
+          <div class="fun-facts">
+            <h4>Technical Achievements:</h4>
+            <ul>
+              <li>Solved 200+ problems on LeetCode and Striver A2Z DSA sheet</li>
+              <li>Oracle Cloud Infrastructure 2025 Certified Foundations Associate</li>
+              <li>AWS Cloud Practitioner Essentials certified</li>
+              <li>Actively participating in hackathons including SIH 2024</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="profile-card">
+            <div class="profile-header">
+              <div class="status-indicator online"></div>
+              <span>Currently available for opportunities</span>
+            </div>
+            <div class="current-focus">
+              <h4>Current Focus:</h4>
+              <div class="focus-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>B.Tech CSE at Jain University (2023-2027)</span>
+              </div>
+              <div class="focus-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Infosys Springboard Virtual Intern</span>
+              </div>
+              <div class="focus-item">
+                <i class="fas fa-cloud"></i>
+                <span>Oracle Cloud & AWS Certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-intro">
+        <p>Technologies and tools I work with to build efficient solutions:</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Programming Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-html5"></i>
+              <span>HTML5</span>
+              <div class="skill-level" data-level="90"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-css3-alt"></i>
+              <span>CSS3</span>
+              <div class="skill-level" data-level="85"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-js-square"></i>
+              <span>JavaScript</span>
+              <div class="skill-level" data-level="80"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+              <div class="skill-level" data-level="85"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-code"></i>
+              <span>C++</span>
+              <div class="skill-level" data-level="75"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <span>SQL</span>
+              <div class="skill-level" data-level="70"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-laptop-code"></i> CS Core & Algorithms</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fas fa-project-diagram"></i>
+              <span>Data Structures & Algorithms</span>
+              <div class="skill-level" data-level="85"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-cube"></i>
+              <span>Object-Oriented Programming</span>
+              <div class="skill-level" data-level="80"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-network-wired"></i>
+              <span>Computer Networks</span>
+              <div class="skill-level" data-level="75"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-server"></i>
+              <span>Operating Systems</span>
+              <div class="skill-level" data-level="75"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <span>Database Management</span>
+              <div class="skill-level" data-level="70"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-cloud"></i> Cloud & Tools</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-aws"></i>
+              <span>AWS</span>
+              <div class="skill-level" data-level="75"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-cloud"></i>
+              <span>Oracle Cloud Infrastructure</span>
+              <div class="skill-level" data-level="80"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-git-alt"></i>
+              <span>Git & GitHub</span>
+              <div class="skill-level" data-level="80"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-code"></i>
+              <span>VS Code</span>
+              <div class="skill-level" data-level="85"></div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-python"></i>
+              <span>PyCharm</span>
+              <div class="skill-level" data-level="75"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project-card">
-        <h3>E-commerce Website</h3>
-        <p>A frontend project showcasing shopping cart and product UI.</p>
-        <a href="https://github.com/TarunSM938" target="_blank">View Code</a>
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-intro">
+        <p>Here are some projects I've worked on that showcase my technical skills:</p>
       </div>
-      <div class="project-card">
-        <h3>Drug Inventory System (SIH 2024)</h3>
-        <p>A collaborative hackathon project for supply chain management.</p>
-        <a href="https://github.com/TarunSM938" target="_blank">View Code</a>
+      <div class="project-grid">
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="project-status">Featured Project</div>
+          </div>
+          <h3>E-Commerce Website</h3>
+          <p class="project-description">
+            Developed a fully responsive e-commerce website using HTML, CSS, and JavaScript. 
+            The project features product listings, detailed product pages, and a functional 
+            shopping cart system. Implemented user-friendly navigation and an intuitive UI 
+            to enhance customer experience.
+          </p>
+          <div class="project-highlights">
+            <div class="highlight">
+              <i class="fas fa-mobile-alt"></i>
+              <span>Responsive Design</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-shopping-cart"></i>
+              <span>Shopping Cart Functionality</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-search"></i>
+              <span>Product Search & Filter</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <h4>Key Features:</h4>
+            <ul>
+              <li>Product listings with category organization</li>
+              <li>Interactive product detail pages</li>
+              <li>Shopping cart with add/remove functionality</li>
+              <li>Responsive design for all screen sizes</li>
+              <li>Clean and modern user interface</li>
+            </ul>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Responsive Design</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/TarunSM938" target="_blank" class="project-link">
+              <i class="fab fa-github"></i>
+              View Code
+            </a>
+          </div>
+          <div class="project-links2">
+            <a href="https://tarunsm938.github.io/E-Commerce/" target="_blank" class="project-link">
+              <i class="fab fa-github"></i>
+              View Live Website
+            </a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="project-status">Personal Project</div>
+          </div>
+          <h3>Portfolio Website</h3>
+          <p class="project-description">
+            Built a personal portfolio website to showcase my projects, skills, and 
+            achievements. Features a responsive and modern UI with clean layout 
+            optimized for both desktop and mobile devices.
+          </p>
+          <div class="project-details">
+            <h4>Implementation:</h4>
+            <ul>
+              <li>Responsive design with mobile-first approach</li>
+              <li>Smooth navigation and interactive sections</li>
+              <li>Clean, professional layout</li>
+              <li>Deployed on GitHub Pages</li>
+              <li>Version control with Git</li>
+            </ul>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">GitHub Pages</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/TarunSM938" target="_blank" class="project-link">
+              <i class="fab fa-github"></i>
+              Source Code
+            </a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-pills"></i>
+            </div>
+            <div class="project-status">Hackathon Project</div>
+          </div>
+          <h3>Drug Inventory Management System</h3>
+          <p class="project-description">
+            Designed and developed a prototype for SIH 2024 hackathon focused on 
+            optimizing pharmaceutical stock tracking and accessibility. Created an 
+            interactive frontend interface demonstrating key inventory management features.
+          </p>
+          <div class="project-details">
+            <h4>Features Developed:</h4>
+            <ul>
+              <li>Drug cataloging system</li>
+              <li>Search functionality for quick access</li>
+              <li>Basic inventory updates interface</li>
+              <li>User-friendly dashboard design</li>
+              <li>System workflow optimization</li>
+            </ul>
+          </div>
+          <div class="project-story">
+            <h4>Hackathon Experience:</h4>
+            <p>
+              Collaborated in the SIH 2024 hackathon environment, contributing ideas on 
+              system workflow, user experience, and technical feasibility. Presented the 
+              prototype as a proof of concept for healthcare supply management applications.
+            </p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Frontend Development</span>
+            <span class="tech-tag">UI/UX Design</span>
+            <span class="tech-tag">System Design</span>
+            <span class="tech-tag">Team Collaboration</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Blog Section -->
-  <section id="blog" class="section">
-    <h2>My Blogs</h2>
-    <article class="blog-post">
-      <h3>My Journey into Cloud Computing</h3>
-      <p>
-        Exploring Oracle Cloud, AWS basics, and my future career path as a Cloud Architect.
-      </p>
-      <a href="#">Read More</a>
-    </article>
-    <article class="blog-post">
-      <h3>What I Learned at Infosys Internship</h3>
-      <p>
-        Hands-on Python development, teamwork, and real-world problem solving.
-      </p>
-      <a href="#">Read More</a>
-    </article>
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="experience-intro">
+        <p>My journey in gaining practical experience through internships and hands-on projects:</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">September 2025 - Present</div>
+            <h3>Python Technology Stack Virtual Intern</h3>
+            <h4>Infosys Springboard</h4>
+            <p>
+              Selected for a milestone-based virtual internship focusing on Python development 
+              and practical project implementation. Working on real-world projects to strengthen 
+              coding, problem-solving, and software development skills.
+            </p>
+            <div class="experience-details">
+              <h4>Key Responsibilities:</h4>
+              <ul>
+                <li>Collaborating with team members on Python-based projects</li>
+                <li>Applying best practices in project management and agile workflows</li>
+                <li>Gaining hands-on experience in Python programming and automation</li>
+                <li>Working on data analysis and practical implementation tasks</li>
+              </ul>
+            </div>
+            <div class="tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Data Analysis</span>
+              <span class="tech-tag">Agile Methodology</span>
+              <span class="tech-tag">Team Collaboration</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">January 2025 - March 2025</div>
+            <h3>Web Development Virtual Intern</h3>
+            <h4>RD INFRO Technology</h4>
+            <p>
+              Completed a comprehensive 6-week virtual internship focused on frontend 
+              web development. Worked on building responsive interfaces and enhanced 
+              my understanding of modern web technologies.
+            </p>
+            <div class="experience-details">
+              <h4>Achievements:</h4>
+              <ul>
+                <li>Built responsive interfaces using HTML, CSS, and JavaScript</li>
+                <li>Demonstrated strong teamwork and problem-solving abilities</li>
+                <li>Applied web technologies to complete assigned projects</li>
+                <li>Gained practical experience in frontend development workflows</li>
+              </ul>
+            </div>
+            <div class="tech-stack">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="certifications-intro">
+        <p>Professional certifications that validate my technical expertise:</p>
+      </div>
+      <div class="certifications-grid">
+        <div class="certification-card featured">
+          <div class="cert-header">
+            <div class="cert-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <div class="cert-date">August 2025</div>
+          </div>
+          <h3>Oracle Cloud Infrastructure 2025 Certified Foundations Associate</h3>
+          <p class="cert-issuer">Oracle</p>
+          <p class="cert-description">
+            Gained foundational knowledge of Oracle Cloud services, architecture, and core concepts. 
+            Demonstrated understanding of cloud security, networking, storage, and Identity and 
+            Access Management (IAM) in OCI.
+          </p>
+          <div class="cert-skills">
+            <span class="skill-tag">Cloud Architecture</span>
+            <span class="skill-tag">OCI Services</span>
+            <span class="skill-tag">Cloud Security</span>
+            <span class="skill-tag">Networking</span>
+          </div>
+        </div>
+        
+        <div class="certification-card">
+          <div class="cert-header">
+            <div class="cert-icon">
+              <i class="fab fa-aws"></i>
+            </div>
+            <div class="cert-date">September 2025</div>
+          </div>
+          <h3>AWS Cloud Practitioner Essentials</h3>
+          <p class="cert-issuer">AWS Training & Certification</p>
+          <p class="cert-description">
+            Acquired comprehensive knowledge of AWS global infrastructure, billing, and cloud 
+            economics. Learned core AWS services including EC2, S3, IAM, and networking fundamentals.
+          </p>
+          <div class="cert-skills">
+            <span class="skill-tag">AWS Services</span>
+            <span class="skill-tag">EC2</span>
+            <span class="skill-tag">S3</span>
+            <span class="skill-tag">IAM</span>
+          </div>
+        </div>
+        
+        <div class="certification-card">
+          <div class="cert-header">
+            <div class="cert-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <div class="cert-date">June 2025</div>
+          </div>
+          <h3>Python Foundation Certification</h3>
+          <p class="cert-issuer">Infosys Springboard</p>
+          <p class="cert-description">
+            Built a strong foundation in Python programming covering data types, control flow, 
+            functions, and error handling. Strengthened problem-solving skills through coding 
+            exercises and applied scenarios.
+          </p>
+          <div class="cert-skills">
+            <span class="skill-tag">Python Programming</span>
+            <span class="skill-tag">Data Types</span>
+            <span class="skill-tag">Control Flow</span>
+            <span class="skill-tag">Problem Solving</span>
+          </div>
+        </div>
+        
+        <div class="certification-card">
+          <div class="cert-header">
+            <div class="cert-icon">
+              <i class="fab fa-ibm"></i>
+            </div>
+            <div class="cert-date">May 2025</div>
+          </div>
+          <h3>Introduction to Cloud Computing</h3>
+          <p class="cert-issuer">IBM (Coursera)</p>
+          <p class="cert-description">
+            Completed a comprehensive beginner-level course on cloud fundamentals, service models 
+            (IaaS, PaaS, SaaS), and deployment models. Understood the basics of virtualization, 
+            cloud scalability, and global adoption trends.
+          </p>
+          <div class="cert-skills">
+            <span class="skill-tag">Cloud Fundamentals</span>
+            <span class="skill-tag">IaaS/PaaS/SaaS</span>
+            <span class="skill-tag">Virtualization</span>
+            <span class="skill-tag">Cloud Scalability</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:tarunsm123@gmail.com">tarunsm123@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/tarun-sm-05b281295/" target="_blank">tarun-sm</a></p>
-    <p>GitHub: <a href="https://github.com/TarunSM938" target="_blank">TarunSM938</a></p>
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-intro">
+        <p>
+          I'm always open to discussing new opportunities, interesting projects, 
+          or just connecting with fellow developers. Feel free to reach out!
+        </p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3>Let's Connect</h3>
+            <p>
+              Currently seeking internship opportunities and freelance projects. 
+              Whether you're looking for a dedicated frontend developer or want to 
+              collaborate on cloud technologies, I'd love to hear from you.
+            </p>
+            
+            <div class="contact-methods">
+              <a href="mailto:tarunsm123@gmail.com" class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="method-info">
+                  <span class="method-label">Email</span>
+                  <span class="method-value">tarunsm123@gmail.com</span>
+                </div>
+              </a>
+              
+              <a href="tel:+919380179429" class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="method-info">
+                  <span class="method-label">Mobile</span>
+                  <span class="method-value">+91 9380179429</span>
+                </div>
+              </a>
+              
+              <a href="https://www.linkedin.com/in/tarun-sm-05b281295/" target="_blank" class="contact-method">
+                <div class="method-icon">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="method-info">
+                  <span class="method-label">LinkedIn</span>
+                  <span class="method-value">Professional networking</span>
+                </div>
+              </a>
+              
+              <a href="https://github.com/TarunSM938" target="_blank" class="contact-method">
+                <div class="method-icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="method-info">
+                  <span class="method-label">GitHub</span>
+                  <span class="method-value">View my code repositories</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="availability">
+              <div class="status-indicator online"></div>
+              <span>Available for new opportunities</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-visual">
+          <div class="collaboration-ideas">
+            <h4>What I can help with:</h4>
+            <div class="idea-items">
+              <div class="idea-item">
+                <i class="fas fa-laptop-code"></i>
+                <span>Frontend Development</span>
+              </div>
+              <div class="idea-item">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Responsive Web Design</span>
+              </div>
+              <div class="idea-item">
+                <i class="fab fa-python"></i>
+                <span>Python Development</span>
+              </div>
+              <div class="idea-item">
+                <i class="fas fa-cloud"></i>
+                <span>Cloud Solutions</span>
+              </div>
+              <div class="idea-item"> 
+                <i class="fas fa-database"></i>
+                <span>Database Management</span>
+              </div>
+              <div class="idea-item">
+                <i class="fas fa-code"></i>
+                <span>Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Tarun SM | Built with </p>
+    <div class="footer-content">
+      <div class="footer-main">
+        <h3>Tarun SM</h3>
+        <p>
+          Frontend Developer and Aspiring Cloud Engineer passionate about creating 
+          efficient digital solutions. This portfolio showcases my journey in 
+          technology and my commitment to continuous learning.
+        </p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <a href="mailto:tarunsm123@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/tarun-sm-05b281295/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/TarunSM938" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Tarun SM | Frontend Developer & Aspiring Cloud Engineer</p>
+      <p class="location">Bengaluru, India</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
