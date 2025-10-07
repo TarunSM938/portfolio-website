@@ -116,9 +116,75 @@ document.addEventListener("DOMContentLoaded", () => {
     if (darkMode) {
       document.body.classList.add("dark-theme");
       toggleBtn.innerHTML = `<i class="fas fa-sun"></i> Light Mode`;
+      // Update header for dark mode
+      if (header) {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const isVerySmallScreen = window.innerWidth <= 375 && window.innerHeight <= 667;
+        const isSmallScreen = window.innerWidth <= 480;
+        const isMobile = window.innerWidth <= 768;
+        
+        // Force header positioning and dimensions
+        header.style.position = 'fixed';
+        header.style.top = '0';
+        header.style.left = '0';
+        header.style.right = '0';
+        header.style.width = '100%';
+        header.style.maxWidth = '100%';
+        header.style.zIndex = '1000';
+        
+        header.style.background = scrollTop > 50 
+          ? 'rgba(30, 30, 46, 0.99)' 
+          : 'rgba(30, 30, 46, 0.98)';
+        header.style.backdropFilter = 'blur(15px)';
+        header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+        
+        // Set proper height for mobile
+        if (isVerySmallScreen) {
+          header.style.minHeight = '60px';
+        } else if (isSmallScreen) {
+          header.style.minHeight = '65px';
+        } else if (isMobile) {
+          header.style.minHeight = '70px';
+        } else {
+          header.style.minHeight = '80px';
+        }
+      }
     } else {
       document.body.classList.remove("dark-theme");
       toggleBtn.innerHTML = `<i class="fas fa-moon"></i> Dark Mode`;
+      // Update header for light mode
+      if (header) {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const isVerySmallScreen = window.innerWidth <= 375 && window.innerHeight <= 667;
+        const isSmallScreen = window.innerWidth <= 480;
+        const isMobile = window.innerWidth <= 768;
+        
+        // Force header positioning and dimensions
+        header.style.position = 'fixed';
+        header.style.top = '0';
+        header.style.left = '0';
+        header.style.right = '0';
+        header.style.width = '100%';
+        header.style.maxWidth = '100%';
+        header.style.zIndex = '1000';
+        
+        header.style.background = scrollTop > 50 
+          ? 'rgba(255, 255, 255, 0.99)' 
+          : 'rgba(255, 255, 255, 0.95)';
+        header.style.backdropFilter = 'blur(15px)';
+        header.style.borderBottom = 'none';
+        
+        // Set proper height for mobile
+        if (isVerySmallScreen) {
+          header.style.minHeight = '60px';
+        } else if (isSmallScreen) {
+          header.style.minHeight = '65px';
+        } else if (isMobile) {
+          header.style.minHeight = '70px';
+        } else {
+          header.style.minHeight = '80px';
+        }
+      }
     }
     localStorage.setItem('darkMode', darkMode);
   }
@@ -155,14 +221,70 @@ document.addEventListener("DOMContentLoaded", () => {
       backToTop.style.display = "none";
     }
     
-    // Update header background on scroll
+    // Update header background on scroll with better mobile handling
     if (header) {
-      if (scrollTop > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
+      // Determine if we're on a very small screen
+      const isVerySmallScreen = window.innerWidth <= 375 && window.innerHeight <= 667;
+      const isSmallScreen = window.innerWidth <= 480;
+      const isMobile = window.innerWidth <= 768;
+      
+      // Force header positioning and dimensions - ALWAYS FIXED
+      header.style.position = 'fixed !important';
+      header.style.top = '0 !important';
+      header.style.left = '0 !important';
+      header.style.right = '0 !important';
+      header.style.width = '100% !important';
+      header.style.maxWidth = '100% !important';
+      header.style.zIndex = '1000 !important';
+      header.style.transform = 'none !important';
+      header.style.transition = 'background-color 0.3s ease, box-shadow 0.3s ease';
+      
+      if (scrollTop > 30) {
+        if (document.body.classList.contains('dark-theme')) {
+          header.style.background = 'rgba(30, 30, 46, 0.99) !important';
+        } else {
+          header.style.background = 'rgba(255, 255, 255, 0.99) !important';
+        }
+        header.style.boxShadow = '0 2px 25px rgba(0, 0, 0, 0.2)';
+        header.style.backdropFilter = 'blur(20px)';
+        
+        // Ensure header stays properly sized on scroll
+        if (isVerySmallScreen) {
+          header.style.minHeight = '60px !important';
+          header.style.height = '60px !important';
+        } else if (isSmallScreen) {
+          header.style.minHeight = '65px !important';
+          header.style.height = '65px !important';
+        } else if (isMobile) {
+          header.style.minHeight = '70px !important';
+          header.style.height = '70px !important';
+        } else {
+          header.style.minHeight = '80px !important';
+          header.style.height = '80px !important';
+        }
       } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        if (document.body.classList.contains('dark-theme')) {
+          header.style.background = 'rgba(30, 30, 46, 0.98) !important';
+        } else {
+          header.style.background = 'rgba(255, 255, 255, 0.95) !important';
+        }
         header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        header.style.backdropFilter = 'blur(15px)';
+        
+        // Maintain original height
+        if (isVerySmallScreen) {
+          header.style.minHeight = '60px !important';
+          header.style.height = '60px !important';
+        } else if (isSmallScreen) {
+          header.style.minHeight = '65px !important';
+          header.style.height = '65px !important';
+        } else if (isMobile) {
+          header.style.minHeight = '70px !important';
+          header.style.height = '70px !important';
+        } else {
+          header.style.minHeight = '80px !important';
+          header.style.height = '80px !important';
+        }
       }
     }
   });
@@ -393,4 +515,92 @@ document.addEventListener("DOMContentLoaded", () => {
   document.head.appendChild(style);
 
   console.log("All interactive features loaded successfully!");
+  
+  // =============================================================================
+  // WINDOW RESIZE HANDLER FOR MOBILE HEADER
+  // =============================================================================
+  function adjustHeaderForScreenSize() {
+    const header = document.querySelector('header');
+    const nav = document.querySelector('nav');
+    
+    if (header && nav) {
+      const isVerySmallScreen = window.innerWidth <= 375 && window.innerHeight <= 667;
+      const isSmallScreen = window.innerWidth <= 480;
+      const isMobile = window.innerWidth <= 768;
+      
+      // Always ensure header positioning
+      header.style.position = 'fixed';
+      header.style.top = '0';
+      header.style.left = '0';
+      header.style.right = '0';
+      header.style.width = '100%';
+      header.style.maxWidth = '100%';
+      header.style.zIndex = '1000';
+      
+      // Set appropriate heights and padding based on screen size
+      if (isVerySmallScreen) {
+        header.style.minHeight = '60px';
+        nav.style.minHeight = '60px';
+        nav.style.padding = '0.5rem 0.8rem';
+      } else if (isSmallScreen) {
+        header.style.minHeight = '65px';
+        nav.style.minHeight = '65px';
+        nav.style.padding = '0.6rem 0.8rem';
+      } else if (isMobile) {
+        header.style.minHeight = '70px';
+        nav.style.minHeight = '70px';
+        nav.style.padding = '0.8rem 1rem';
+      } else {
+        header.style.minHeight = '80px';
+        nav.style.minHeight = '80px';
+        nav.style.padding = '1rem 2rem';
+      }
+      
+      // Apply proper background based on dark mode and scroll position
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (document.body.classList.contains('dark-theme')) {
+        header.style.background = scrollTop > 30 
+          ? 'rgba(30, 30, 46, 0.99)' 
+          : 'rgba(30, 30, 46, 0.98)';
+        header.style.backdropFilter = 'blur(15px)';
+        header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+      } else {
+        header.style.background = scrollTop > 30 
+          ? 'rgba(255, 255, 255, 0.99)' 
+          : 'rgba(255, 255, 255, 0.95)';
+        header.style.backdropFilter = 'blur(15px)';
+        header.style.borderBottom = 'none';
+      }
+    }
+  }
+  
+  // Call on load and resize
+  adjustHeaderForScreenSize();
+  window.addEventListener('resize', adjustHeaderForScreenSize);
+  window.addEventListener('orientationchange', () => {
+    setTimeout(adjustHeaderForScreenSize, 300); // Delay for orientation change completion
+  });
+  
+  // Additional header stability for mobile
+  const forceHeaderStability = () => {
+    const header = document.querySelector('header');
+    if (header && window.innerWidth <= 768) {
+      header.style.position = 'fixed';
+      header.style.top = '0';
+      header.style.left = '0';
+      header.style.right = '0';
+      header.style.zIndex = '1000';
+      header.style.transform = 'none';
+      header.style.willChange = 'background-color, box-shadow';
+    }
+  };
+  
+  // Run stability check every 100ms on mobile
+  if (window.innerWidth <= 768) {
+    setInterval(forceHeaderStability, 100);
+  }
+  
+  // Also run on touchstart and touchmove events
+  document.addEventListener('touchstart', forceHeaderStability);
+  document.addEventListener('touchmove', forceHeaderStability);
 });
