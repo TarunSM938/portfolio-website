@@ -633,18 +633,19 @@ nav {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
 }
 
 .project-card {
   background: white;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .project-card::before {
@@ -712,13 +713,14 @@ nav {
 .project-card h3 {
   color: #333;
   margin-bottom: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
 }
 
 .project-description {
   color: #666;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
 }
 
 .project-highlights {
@@ -1131,18 +1133,21 @@ nav {
 
 .project-details h4 {
   color: #333;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.98rem;
 }
 
 .project-details ul {
   list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 .project-details li {
   color: #666;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
   padding-left: 1rem;
+  font-size: 0.92rem;
   position: relative;
 }
 
